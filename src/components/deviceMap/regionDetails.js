@@ -28,7 +28,7 @@ class RegionDetails extends Component {
         return (item.Rule.Severity === Config.STATUS_CODES.CRITICAL && item.Status === Config.STATUS_CODES.OPEN);
       }).length;
       regionDetailsProps.totalWarningsDeviceCount = this.props.alarmList.filter(item => {
-        return item.Rule.Severity === Config.STATUS_CODES.WARNING && item.Status === Config.STATUS_CODES.OPEN;
+        return (item.Rule.Severity === Config.STATUS_CODES.WARNING && item.Status === Config.STATUS_CODES.OPEN);
       }).length;
     }
 
